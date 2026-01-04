@@ -1,0 +1,39 @@
+**Table 6. Overview of water leakage-related datasets and technical attributes**
+
+Yin, R., Xu, H., Wei, J., & Varga, L. (2025). Addressing data sharing challenges for leakage management in water distribution networks: An MCDM-based assessment of barriers and solutions. *Journal of Environmental Management*, 391, 126481. https://doi.org/10.1016/j.jenvman.2025.126481
+
+
+
+| Data Source | Data Description | Technical Details |
+|------------|------------------|-------------------|
+| **DMA Data** (DMA Water Zones, ArcGIS Hub) | Each District Metered Area (DMA) is uniquely identified by an ID, with approximate centre coordinates and boundary geometry defining the precise spatial extent of the DMA as a polygon. | Polygon geometry, typically formatted using spatial data standards such as GeoJSON, WKT (Well-Known Text), or Shapefile to represent DMA boundaries. |
+| **Water Consumption Data** (Yorkshire Water Leakage DMA 15-Minute Data, Data Mill North; SES Water Domestic Consumption) | Data related to household and non-household water usage, population, meter readings, and aggregated water consumption across DMAs. | Includes identifiers, consumption metrics, and temporal information. Aligned with geographic and temporal scales, using formats such as integers, floats, and timestamps. |
+| **Customer Complaint Data** (CFPB / Consumer Finance Complaints, Hugging Face) | Data on customer complaints, including complaint IDs, dates received and forwarded, narrative descriptions, postcodes, complaint categories, response indicators, and handling company names. | Alphanumeric complaint IDs, dates (YYYY-MM-DD), text narratives, complaint categories, and binary fields (yes/no). Data aligns with privacy standards (e.g., personal data redaction). |
+| **Sensor Data** (Array of Things Locations, City of Chicago Data Portal; Water Level and Flow Monitoring Complex) | Measurements and asset details from sensors monitoring water systems, including water pressure, flow rate, and temperature, along with metadata such as sensor location, age, type, and status. | Geographic coordinates (X, Y), measured data such as pressure (Pa), flow rate (l/s), temperature (°C), and asset attributes including sensor type, age (years), installation year, status, and manufacturer. |
+| **Pipe Data** (Utility Corporation Records) | Data about pipeline locations, physical attributes, and operational status, including pipe ID, geometry, length, material, diameter, year of installation, number of breaks, and flow direction. | Spatial geometry (line objects), numerical attributes (length in meters, diameter in cm), categorical fields (material, status, flow direction), and installation year (YYYY format). |
+| **Repair Data** (Utility Data Downloads) | Data related to repair activities, including repair ID, status, location, timelines (start and end dates), repair type, last maintenance date, and fault type. | Unique identifiers, dates/times (ISO 8601 format), geographical coordinates (latitude/longitude), and standardized repair and fault classification fields. |
+| **Geological Data** (British Geological Survey Datasets) | Information on soil texture, pH, corrosivity, permeability, and density, describing environmental factors influencing water leakage in pipelines. | Soil classifications (e.g., sandy, clay), numerical values for pH, permeability (cm/hr), and density (g/cm³), linked to geographic coordinates and spatial resolutions at defined depths. |
+| **Weather Data** (Copernicus Climate Change Service; ERA5; Kidd/UMD/ESSIC, 2021) | Spatial–temporal atmospheric statistics derived from reanalysis datasets, including precipitation, wind speed, humidity, and pressure at multiple pressure levels. | Variables include air temperature (K), wind speed (m/s), humidity (kg/kg), and pressure (Pa), provided on spatial grids, linked to geographic coordinates, with defined temporal resolution. |
+| **Land Data** (Copernicus Climate Change Service) | Daily statistics on surface and subsurface variables, including soil moisture, surface temperature, evaporation, snow cover, and snow depth. | Variables include soil moisture (m³/m³), surface temperature (K), total evaporation (m), and snow depth (m), with high spatial resolution linked to geographic coordinates. |
+
+
+### DMA Data
+DMA data provides critical spatial information, including unique identifiers, geographic centre coordinates, and boundary geometry (e.g., Portsmouth Water Nightflow Data; DMA Water Zones, ArcGIS Hub). This spatial data is essential for water leakage analysis, as it enables localisation and mapping of areas affected by leaks. By correlating leakage indicators such as flow and pressure variations with DMA boundaries, water utilities can accurately pinpoint leak locations, optimise repair efforts, and improve resource allocation.
+
+### Water Consumption Data
+Consumption data provides detailed insights into water usage within each DMA, including household and non-household property counts, population, individual meter readings, and aggregated consumption (e.g., Yorkshire Water Leakage DMA 15-Minute Data; SES Water Domestic Consumption). Anomalies in consumption patterns or unexpected fluctuations can indicate potential leakage. Integrating consumption data with flow and pressure measurements improves leakage detection accuracy and supports prioritisation of maintenance activities across DMAs.
+
+### Customer Complaint Data
+Customer complaint data includes unique complaint identifiers, dates received and forwarded, narrative descriptions, complaint categories, and postcodes (e.g., CFPB Consumer Complaints dataset). Customer-reported issues such as visible leaks provide valuable, location-specific indicators of leakage. Analysing complaint patterns by geography and category complements sensor-based methods and helps improve response times and repair prioritisation.
+
+### Sensor Data
+Sensor data includes identifiers, geographic coordinates, and time-stamped measurements such as pressure, flow rate, and temperature (e.g., Array of Things; Water Level and Flow Monitoring datasets). Irregular patterns in pressure or flow signals can indicate leakage events. Metadata such as sensor age, type, and operational status further supports maintenance planning and data quality assurance, strengthening the reliability of leakage detection systems.
+
+### Pipe Data
+Pipe data captures structural and operational attributes of pipeline segments, including material, diameter, length, installation year, operational status, and historical break records. These attributes are critical for leakage analysis, as pipe age, material, and prior failures strongly influence leakage risk. Pipe data enables predictive maintenance and supports targeted inspection strategies for vulnerable network sections.
+
+### Repair Data
+Repair data records maintenance activities, including repair identifiers, dates, locations, repair types, and fault classifications. Analysing repair histories allows utilities to identify recurring leakage hotspots and common failure modes. This information supports proactive maintenance planning and continuous improvement of leakage management strategies.
+
+### Geological, Land, and Weather Data
+External datasets describing soil properties, land surface conditions, and weather variables provide valuable contextual information for leakage prediction. Geological data (e.g., soil texture and pH), land variables (e.g., soil moisture and surface temperature), and weather variables (e.g., precipitation and snowfall) from sources such as the British Geological Survey, Copernicus Climate Change Service, and ERA5 reanalysis help capture environmental drivers of leakage risk. Integrating these datasets with utility-collected data enhances predictive accuracy and supports robust, climate-aware leakage management.

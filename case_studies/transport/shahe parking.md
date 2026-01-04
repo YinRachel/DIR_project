@@ -1,4 +1,7 @@
 # Case Study: Digitalised Non-Motorised Vehicle Management at Shahe Metro Station, Beijing
+https://mp.weixin.qq.com/s?__biz=MzUxNTA3NjUzMQ==&mid=2247571926&idx=2&sn=7f2bd1e51c11e12eac2e0181c3da4b38&chksm=f87990315ae7ecc5223c9c80d444c0c26276cf618d1deed51e56de29f2558a98bae9b7cab2f2&scene=27
+
+https://mp.weixin.qq.com/s/mvlvcMOyQ2sSBuqfa81Tkw
 
 ## Description and Basic Information
 This case study concerns the digitalised governance of non-motorised vehicle (primarily bicycles and e-bikes) parking around **Shahe Metro Station** in Beijing, China. The initiative has been developed and implemented by local district authorities with support from the Beijing Municipal Development and Reform Commission, and has been reported publicly between **2024 and 2026**.
